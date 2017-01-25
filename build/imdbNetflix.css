@@ -1,0 +1,44 @@
+.bob-imdb-extra {
+  width: 250px;
+  position: absolute;
+  background: rgba(0,0,0,0.5);
+  left: 102%;
+  top: 0;
+  height: auto;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.bob-imdb-extra h4 {
+  display: block;
+  margin: 0;
+  padding: 10px;
+  background: #f5de50;
+  color: #000;
+}
+
+.bob-imdb-extra h4 .star {
+    color: #fff;
+    font-size: 1.1vw;
+    padding: 0;
+    float: right;
+}
+
+.bob-imdb-extra h4 .star .rating {
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  color: #000;
+  float: right;
+  padding-left: 8px;
+  padding-top: 1px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.bob-imdb-extra ul {
+  padding: 10px;
+  margin: 0;
+}
+
+.bob-imdb-extra ul li {
+  font-size: 1vw;
+}
