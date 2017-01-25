@@ -1,6 +1,11 @@
-/*
-Implement: http://www.omdbapi.com/?t=title&y=&plot=short&r=json
-*/
+/**
+ * Created by Cas van Dongen on 24-01-2017
+ * Last updated on 25-01-2017
+ * 
+ * To-Do:
+ *  - Extend the Title.drawBox(container, data) method
+ *  - Add page with top 100 to new Netflix page
+ */
 
 //* Import everything
 import * as $ from 'jquery';
@@ -66,6 +71,7 @@ class Title {
   //* Draw content box method
   private drawBox(container:JQuery, data:string):void {
 
+    //* Data to JSON
     var imdb = JSON.parse(data);
     console.log(imdb);
 
