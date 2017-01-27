@@ -5,6 +5,7 @@
  */
 
 import * as Promise from "bluebird";
+import * as $ from 'jquery';
 
 //* Netflix Title class
 export class Title {
