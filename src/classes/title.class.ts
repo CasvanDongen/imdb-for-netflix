@@ -1,7 +1,6 @@
 /**
  * @author Cas van Dongen <info@buitengewoonuniek.nl>
  * @since 27-01-2017
- * @todo Create better UI, should design in Photoshop and run a user test.
  */
 
 import * as Promise from "bluebird";
@@ -12,6 +11,8 @@ export class Title {
 
   public name:string;
   private overlay:JQuery;
+  private score:number;
+  private colorClass:string;
 
   //* constructor
   constructor(name:string, overlay:JQuery){
@@ -69,22 +70,31 @@ export class Title {
 
     //* Data to JSON
     var imdb = JSON.parse(data);
-    console.log(imdb);
 
     //* Check if Response is not false
     if (imdb.Title && imdb.imdbVotes != "N/A") {
 
       //* Movie found
-      var text = "<h4>IMDB rating <span class=\"star personal icon-star\"> <span class=\"rating\">" + imdb.imdbRating + "</span></span></h4>";
-      text += "<ul><li><strong>Amount of votes: </strong> " + imdb.imdbVotes + "</li></ul>";
+      this.score = parseFloat(imdb.imdbRating);
 
+    }
+
+    //* Set class based on score
+    if (this.score > 7.5){
+
+      this.colorClass = "good";
+    } else if(this.score > 5.5) {
+
+      this.colorClass = "medium";
+    } else if(this.score > 0) {
+
+      this.colorClass = "bad";
     } else {
 
-      //* Movie not found
-      var text = "<h4>IMDB rating <span class=\"star personal icon-star\"> <span class=\"rating\">unknown</span></span></h4>";
+      this.colorClass = "inactive";
     }
-    
+
     //* Append all the data to the container
-    $(container).append('<div class="bob-imdb-extra">' + text + '</div>');
+    $(container).append('<div class="bob-imdb-extra ' + this.colorClass + '">' + this.score + '</div>');
   }
 }

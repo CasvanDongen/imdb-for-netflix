@@ -1,5 +1,5 @@
 /node_modules
 /.vscode
 
-/build/*.js
+/build/javascript/*.js
 tsconfig.json

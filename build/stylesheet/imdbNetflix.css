@@ -1,0 +1,66 @@
+/**
+ * @author Cas van Dongen <info@buitengewoonuniek.nl>
+ * @since 25-01-2017
+ **/
+
+.bob-imdb-extra, 
+.bob-imdb-extra * {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.bob-imdb-extra {
+  width: 75px;
+  height: 24px;
+
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  z-index: 999999;
+
+  background-color: #f1c40f;
+  background-image: url('chrome-extension://__MSG_@@extension_id__/build/images/IMDB-logo.png'); 
+  background-position: 35px 5px;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  overflow: hidden;
+
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 3px 8px;
+
+  -webkit-animation: fadein 1s;
+  animation: fadein 1s;
+}
+
+/* Label states */
+.bob-imdb-extra.bad {
+  background-color: #e74c3c;
+}
+
+.bob-imdb-extra.medium {
+  background-color: #e67e22;
+}
+
+.bob-imdb-extra.good {
+  background-color: #f1c40f;
+}
+
+.bob-imdb-extra.inactive {
+  background-color: #95a5a6;
+  text-indent: -9999px;
+  white-space: nowrap;
+}
+
+/* Animations */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}

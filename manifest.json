@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Netflix IMDB",
   "description": "What do you miss the most on the Netflix website? That's right, information from IMDB.com.",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "permissions": [
     "*://*.netflix.com/",
     "webRequest"
@@ -10,8 +10,11 @@
   "content_scripts": [
     {
       "matches": ["*://*.netflix.com/*"],
-      "js": ["./build/mainScript.js"],
-      "css" : ["./build/imdbNetflix.css"]
+      "js": ["./build/javascript/mainScript.js"],
+      "css" : ["./build/stylesheet/imdbNetflix.css"]
     }
+  ],
+  "web_accessible_resources": [
+    "build/images/IMDB-logo.png"
   ]
 }

@@ -3,7 +3,7 @@ module.exports = {
     mainScript: "./src/mainScript.ts"
   },
   output: {
-    path: './build',
+    path: './build/javascript',
     filename: '[name].js'
   },
   resolve: {
@@ -13,8 +13,5 @@ module.exports = {
     loaders: [
        { test: /\.tsx?$/, loader: 'ts-loader?compiler=typescript' }
     ]
-  },
-  // externals: {
-  //   "jquery": "JQuery"
-  // },
+  }
 }
