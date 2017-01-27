@@ -1,6 +1,6 @@
 {
   "name": "imdb-for-netflix",
-  "version": "1.0.1",
+  "version": "0.1.1",
   "description": "What do you miss the most on the Netflix website? That's right, information from IMDB.com.",
   "main": "index.js",
   "scripts": {
