@@ -10,3 +10,6 @@ IMDB for Netflix is a chrome extension created by Cas van Dongen. This extension
  - [Chrome 0.1.0](https://github.com/afc163/chrome)
  - [Bluebird 3.4.7](https://github.com/petkaantonov/bluebird)
  - [jQuery 3.1.1](https://github.com/jquery/jquery)
+  
+### Example
+![Version 0.1.0](https://i.gyazo.com/0125fd853899b5f28f85b08771c408da.gif)
